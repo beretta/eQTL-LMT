@@ -4,9 +4,9 @@ Improving eQTL Analysis using a Machine Learning Approach for Data Integration: 
 ## Prerequisites
 
 * R
-  * libraries: tools, MatrixEQTL, qtl
+  * libraries: tools, MatrixEQTL, qtl, unbalanced
 * Python2.7
-  * libraries: scipy
+* WEKA
 
 ## Run
 To run the pipeline run the bash script `run_dream.sh'
