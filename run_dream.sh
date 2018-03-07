@@ -21,7 +21,7 @@ WD=`pwd`
 echo ${WD}
 
 cd ${DATA_DIR}/
-for d in 100 #300 999
+for d in 100 300 999
 do
 	DS=DREAM5_SysGenA${d}
 	if [[ ! -d ${DS} ]]
@@ -30,7 +30,7 @@ do
 		exit
 	fi
 	pushd ${DS}
-	for i in {1..1}
+	for i in {1..5}
 	do
 		NET=${DS}_Network${i}
 		# Prepare input and run tools

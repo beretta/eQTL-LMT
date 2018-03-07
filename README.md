@@ -5,5 +5,7 @@ Improving eQTL Analysis using a Machine Learning Approach for Data Integration: 
 
 * R
   * libraries: tools, MatrixEQTL, qtl
-
 * Python2.7
+
+## Run
+To run the pipeline run the bash script `run_dream.sh'
