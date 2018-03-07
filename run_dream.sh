@@ -49,7 +49,10 @@ do
 			-k ${NET}_rqtl_hk.csv \
 			-t Truth/${DS}_Edges_Network${i}.tsv \
 			-o ${NET}_matrix.csv
+		cut -d ',' -f 3,4,5,8,12,14 ${NET}_matrix.csv > ${NET}_matrix_corr.csv
 		gzip ${NET}_matrix.csv
+		Rscript ${WD}/${SCRIPT_DIR}/reduce_dataset.R \
+			${NET}_matrix_corr
 	done
 	popd
 done
