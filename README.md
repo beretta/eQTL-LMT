@@ -4,6 +4,6 @@ Improving eQTL Analysis using a Machine Learning Approach for Data Integration: 
 ## Prerequisites
 
 * R
-  * libraries: tools, MatrixEQTL
+  * libraries: tools, MatrixEQTL, qtl
 
 * Python
