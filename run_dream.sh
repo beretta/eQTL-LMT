@@ -51,8 +51,12 @@ do
 			-o ${NET}_matrix.csv
 		cut -d ',' -f 3,4,5,8,12,14 ${NET}_matrix.csv > ${NET}_matrix_corr.csv
 		gzip ${NET}_matrix.csv
+		# Reduce dataset for Machine Learning
 		Rscript ${WD}/${SCRIPT_DIR}/reduce_dataset.R \
 			${NET}_matrix_corr
+		# Run LMT
+		bash ${WD}/${SCRIPT_DIR}/run_LMT.sh \
+			${NET}_matrix_corr_reduced
 	done
 	popd
 done
