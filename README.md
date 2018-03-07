@@ -6,4 +6,4 @@ Improving eQTL Analysis using a Machine Learning Approach for Data Integration: 
 * R
   * libraries: tools, MatrixEQTL, qtl
 
-* Python
+* Python2.7
