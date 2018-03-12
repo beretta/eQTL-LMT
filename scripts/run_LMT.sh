@@ -23,7 +23,7 @@ do
 	# When fitting the logistic regression functions at a node, LMT has to determine the number of LogitBoost iterations to run. 
 	# Originally, this number was cross-validated at every node in the tree. To save time, this heuristic cross-validates the number 
 	# only once and then uses that number at every node in the tree. Usually this does not decrease accuracy but improves runtime considerably.
-	java -cp ./weka.jar weka.classifiers.meta.MultiScheme -X 0 -S 1 -B "weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0" -t ${DS_ARFF} -split-percentage 70 -s ${j} -i -o -k > ${DS}_stat${j}.csv
+	java -cp ${2} weka.classifiers.meta.MultiScheme -X 0 -S 1 -B "weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0" -t ${DS_ARFF} -split-percentage 70 -s ${j} -i -o -k > ${DS}_stat${j}.csv
 	# This is an alternative command if training and test instances are into different files called training<1,2,...>.arff and test<1,2,...>.arff
 	# java -cp ./weka.jar weka.classifiers.meta.MultiScheme -X 0 -S 1 -B "weka.classifiers.trees.LMT -I -1 -M 15 -W 0.0" -t train$j.arff -T test$j.arff -i -o -k > stat$j.csv
 	# End of the run "j"

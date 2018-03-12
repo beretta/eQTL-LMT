@@ -1,5 +1,12 @@
 #!/bin/bash
 
+WEKA_CP=${2}
+if [[ ! -f ${WEKA_CP}/ ]]
+then
+	echo "WEKA classpath '${WEKA_CP}' not found!"
+	exit
+fi
+
 # Check data directory
 DATA_DIR=data
 if [[ ! -d ${DATA_DIR}/ ]]
@@ -56,7 +63,8 @@ do
 			${NET}_matrix_corr
 		# Run LMT
 		bash ${WD}/${SCRIPT_DIR}/run_LMT.sh \
-			${NET}_matrix_corr_reduced
+			${NET}_matrix_corr_reduced \
+            ${WEKA_CP}
 	done
 	popd
 done
